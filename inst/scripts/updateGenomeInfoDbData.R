@@ -19,8 +19,9 @@
     species[[3]] <- gsub('\t','',species[[3]])
     ## throw away rows where the third column doesn't say 'scientific name'
     keep <- grepl('scientific name', species[[3]])
-    species <- species[keep,1:2]
- 
+    keep2 <- grepl('synonym', species[[3]])
+    species <- species[(keep | keep2), 1:2]
+    
     ## split second column by first space:
     rawSpec <- species[[2]]
     spltSpec <- strsplit(rawSpec, split=" ")
