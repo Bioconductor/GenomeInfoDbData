@@ -9,14 +9,14 @@
 
 \description{
   This package contains three mapping objects:
-  \itemize{ 
+  \itemize{
     \item speciesMap: A data frame with columns \sQuote{tax_id},
-          \sQuote{genus}, and \sQuote{species}. Used to retrieve taxonomy
-          ID by species and returns list of available species.
+	  \sQuote{genus}, and \sQuote{species}. Used to retrieve taxonomy
+	  ID by species and returns list of available species.
     \item validTaxIds: An integer vector of valid taxonomy IDs created from
-          \code{speciesMap}. Used internally for quick taxonomy ID look ups.
+	  \code{speciesMap}. Used internally for quick taxonomy ID look ups.
     \item specData: A data frame with columns \sQuote{taxon} and
-          \sQuote{species}. Used internally to retrieve species by taxonomy ID.
+	  \sQuote{species}. Used internally to retrieve species by taxonomy ID.
   }
 }
 
@@ -34,8 +34,8 @@ data(specData)
 
 \examples{
 data(speciesMap)
-sapply(speciesMap, class)   #       taxon     species 
-                            #    "integer" "character" 
+sapply(speciesMap, class)   #       taxon     species
+			    #    "integer" "character"
 subset(speciesMap, species=="Homo sapiens")$taxon # [1] 9606
 }
 
