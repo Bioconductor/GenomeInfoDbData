@@ -40,3 +40,27 @@
                            stringsAsFactors=FALSE)
     save(specData, file='specData.rda', compress="xz")
 }
+
+## Generates speciesMap and validTaxIds
+.processSpeciesMapData <- function(){
+    con <- file('names.dmp')
+    species <- readLines(con)
+    close(con)
+    splt <- strsplit(species, split='\\t\\|\\t')
+    ## Throw away elements where column 4 is not 'scientific name' or 'synonym'
+    idx1 <- unlist(lapply(splt, function(x){grepl('scientific name', x[4])}))
+    idx2 <- unlist(lapply(splt, function(x){grepl('synonym', x[4])}))
+    idx <- idx1 | idx2
+    splt <- splt[idx]
+    ## and keep only 1st two elements
+    taxon <-  as.integer(unlist(lapply(splt, function(x){x[1]})))
+    species <- unlist(lapply(splt, function(x){x[2]})) 
+    speciesMap <- data.frame(taxon,    ## integer
+                             species,  ## character 
+                             stringsAsFactors=FALSE)
+    save(speciesMap, file='speciesMap.rda', compress="xz")
+
+    ## Then get the valid Tax IDs.
+    validTaxIds <- unique(speciesMap$taxon)  ## integer
+    save(validTaxIds, file='validTaxIds.rda', compress="xz")
+}
