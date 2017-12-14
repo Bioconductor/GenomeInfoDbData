@@ -7,10 +7,10 @@
 
 \description{
   This package contains one mapping object:
-  \itemize{ 
+  \itemize{
     \item specData: A data frame with columns \sQuote{tax_id},
-          \sQuote{genus}, and \sQuote{species}. Used to retrieve taxonomy
-          ID by species and returns list of available species.
+	  \sQuote{genus}, and \sQuote{species}. Used to retrieve taxonomy
+	  ID by species and returns list of available species.
 	  }
 }
 
@@ -27,8 +27,8 @@ data(specData)
 \examples{
 data(specData)
 sapply(specData, class)   #      tax_id       genus     species
-                          #   "integer"    "factor" "character" 
- 
+			  #   "integer"    "factor" "character"
+
 subset(specData, c(genus=="Homo" &  species=="sapiens"))$tax_id # [1] 9606
 }
 

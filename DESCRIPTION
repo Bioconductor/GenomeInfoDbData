@@ -1,9 +1,9 @@
-Package: GenomeInfoDbData 
-Title: Species and taxonomy ID look up tables used by GenomeInfoDb 
+Package: GenomeInfoDbData
+Title: Species and taxonomy ID look up tables used by GenomeInfoDb
 Description: Files for mapping between NCBI taxonomy ID and species. Used
-        by functions in the GenomeInfoDb package.
-Version: 0.99.2
-Author: Bioconductor Core Team 
+	by functions in the GenomeInfoDb package.
+Version: 1.1.0
+Author: Bioconductor Core Team
 Maintainer: Bioconductor Maintainer <maintainer@bioconductor.org>
 Depends: R (>= 3.3)
 biocViews: AnnotationData, Organism

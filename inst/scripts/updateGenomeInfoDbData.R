@@ -1,6 +1,6 @@
 ## Scripts for updating specData, speciesMap and validTaxId
 
-## Download and unpack mapping file: 
+## Download and unpack mapping file:
 ## ftp://ftp.ncbi.nih.gov/pub/taxonomy/taxdump.tar.gz
 
 ## Generates specData
@@ -21,7 +21,7 @@
     keep <- grepl('scientific name', species[[3]])
     keep2 <- grepl('synonym', species[[3]])
     species <- species[(keep | keep2), 1:2]
-    
+
     ## split second column by first space:
     rawSpec <- species[[2]]
     spltSpec <- strsplit(rawSpec, split=" ")
