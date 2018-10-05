@@ -1,4 +1,4 @@
-## Scripts for updating specData, speciesMap and validTaxId
+## Scripts for updating specData
 
 ## Download and unpack mapping file:
 ## ftp://ftp.ncbi.nih.gov/pub/taxonomy/taxdump.tar.gz
