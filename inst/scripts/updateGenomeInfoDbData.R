@@ -2,6 +2,7 @@
 
 ## Download and unpack mapping file:
 ## ftp://ftp.ncbi.nih.gov/pub/taxonomy/taxdump.tar.gz
+## wget  and tar -xzf
 
 ## Generates specData
 .processTaxNamesFile <- function(filesDir=getwd()){
