@@ -1,7 +1,7 @@
 ## Scripts for updating specData
 
 ## Download and unpack mapping file:
-## ftp://ftp.ncbi.nih.gov/pub/taxonomy/taxdump.tar.gz
+## https://ftp.ncbi.nlm.nih.gov/pub/taxonomy/taxdump.tar.gz
 ## wget  and tar -xzf
 
 ## Generates specData
