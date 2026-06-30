@@ -1,4 +1,5 @@
 \name{GenomeInfoDbData-package}
+\docType{package}
 
 \alias{GenomeInfoDbData-package}
 \alias{specData}
