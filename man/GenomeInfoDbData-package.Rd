@@ -1,6 +1,7 @@
-\name{GenomeInfoDb-package}
+\name{GenomeInfoDbData-package}
+\docType{package}
 
-\alias{GenomeInfoDb-package}
+\alias{GenomeInfoDbData-package}
 \alias{specData}
 
 \title{Species and taxonomy ID look up tables}
